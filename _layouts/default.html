@@ -1,0 +1,47 @@
+
+
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+
+
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style data-a2a-scroll-show="0,60" a2a_vertical_style" style="left:0px; top:300px;">
+    
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+<body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+    {% include_cached browser-upgrade.html %}
+    {% include_cached masthead.html %}
+
+ 
+    <div class="initial-content">
+      {{ content }}
+    </div>
+
+
+
+
+<a class="twitter-timeline" data-lang="el" data-width="412" data-height="300" data-theme="dark" href="https://twitter.com/p16bouk">Tweets by p16bouk</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include_cached search/search_form.html %}
+      </div>
+    {% endif 
+    <div class="page__footer">
+      <footer>
+       <!-- --> 
+        {% include footer/custom.html %}
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+    {% include_cached scripts.html %}
+  </body>
+</html>
